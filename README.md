@@ -18,17 +18,21 @@ http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.
 19 GB (около 1.5 миилиона статей)
 
 2)  массив запросов, которые нужно произвести
-        ArrayList<String> need_query_array = XmlWork.get_list_query("/Users/Nurislam/Documents/lucene_index_file/data/new/and_relevant-minus_table.xml");
-        номер запроса - текст запроса
+
+        rrayList<String> need_query_array = XmlWork.get_list_query("/Users/Nurislam/Documents/lucene_index_file/data/new/and_relevant-minus_table.xml");
+        //номер запроса - текст запроса
         HashMap<String, String> hashmap = XmlWork.get_id_query("/Users/Nurislam/Documents/lucene_index_file/data/new/web2008_adhoc.xml");
   
 3) выполняем запросы и получаем список документов, релевантных по данным запросам
+
         ArrayList<ScoreDoc[]> list_doc_wich_rel = Queries.do_query(need_query_array, hashmap);
 
 4) пишем в xml-файлы запросы и документы, которые наша система посчитала релевантными 
+
         write_xml(list_doc_wich_rel, need_query_array);
+
   
-5) Metrics.class - подсёт метрик
+5) Metrics.class - подсчёт метрик
 
 В виду высокого времени выполнения метрики считались на 5 случайно взятых запросах
 Метрики (на 5 запросах)
