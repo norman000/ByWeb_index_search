@@ -7,6 +7,7 @@ http://romip.ru/tasks/2008/web2008_adhoc.xml.bz2 (запросы)
 http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.gz (таблицы релевантности)
 
 Этапы: 
+
 1) строим индексы и сохраняем в файл
         BuildIndex bi = new BuildIndex();
         File[] get_file_array = bi.get_file_in_folder("путь до файлов txt (около 500)");
