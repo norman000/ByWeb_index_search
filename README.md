@@ -19,7 +19,7 @@ http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.
 
 2)  массив запросов, которые нужно произвести
 
-        rrayList<String> need_query_array = XmlWork.get_list_query("and_relevant-minus_table.xml");
+        ArrayList<String> need_query_array = XmlWork.get_list_query("and_relevant-minus_table.xml");
         //номер запроса - текст запроса
         HashMap<String, String> hashmap = XmlWork.get_id_query("web2008_adhoc.xml");
   
