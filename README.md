@@ -15,7 +15,7 @@ http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.
         bi.create_index(get_file_array);
 Сохраняет индексы в отдельном файле
 Индексы (без стеммера)
-19 GB (около 1.5 миилиона статей)
+19 GB (около 1.5 миллиона статей)
 
 2)  массив запросов, которые нужно произвести
 
