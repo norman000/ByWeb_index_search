@@ -1,6 +1,9 @@
 http://romip.ru/ru/collections/by.web-2007.html (сырые данные)
+
 https://yadi.sk/d/sy4qfmK0LKBva (подготовленные)
+
 http://romip.ru/tasks/2008/web2008_adhoc.xml.bz2 (запросы)
+
 http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.gz (таблицы релевантности)
 
 Этапы: 
