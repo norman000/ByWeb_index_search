@@ -9,6 +9,7 @@ http://romip.ru/relevance-tables/2009/web-adhoc/by/and_relevant-minus_table.xml.
 Этапы: 
 
 1) строим индексы и сохраняем в файл
+
         BuildIndex bi = new BuildIndex();
         File[] get_file_array = bi.get_file_in_folder("путь до файлов txt (около 500)");
         bi.create_index(get_file_array);
