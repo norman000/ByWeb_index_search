@@ -2,7 +2,6 @@ package MainPackage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -16,10 +15,10 @@ public class Metrics {
         HashMap<String, String> hm3 = new HashMap<String, String>();
         HashMap<String, String> hm4 = new HashMap<String, String>();
 
-        hm1 = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/new_xml/arw57797.xml");
-        hm2 = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/new_xml/arw57272.xml");
-        hm3 = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/new_xml/arw53809.xml");
-        hm4 = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/new_xml/arw53808.xml");
+        hm1 = XmlWork.get_relevance_hashmap_m("/lucene_index_file/new_xml/arw57797.xml");
+        hm2 = XmlWork.get_relevance_hashmap_m("/lucene_index_file/new_xml/arw57272.xml");
+        hm3 = XmlWork.get_relevance_hashmap_m("/lucene_index_file/new_xml/arw53809.xml");
+        hm4 = XmlWork.get_relevance_hashmap_m("/lucene_index_file/new_xml/arw53808.xml");
 
         hm_array.add(hm1);
         hm_array.add(hm2);
@@ -33,10 +32,10 @@ public class Metrics {
         HashMap<String, String> hm3_past = new HashMap<String, String>();
         HashMap<String, String> hm4_past = new HashMap<String, String>();
 
-        hm1_past = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/past_xml/arw57797.xml");
-        hm2_past = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/past_xml/arw57272.xml");
-        hm3_past = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/past_xml/arw53809.xml");
-        hm4_past = XmlWork.get_relevance_hashmap_m("/Users/Nurislam/Documents/lucene_index_file/past_xml/arw53808.xml");
+        hm1_past = XmlWork.get_relevance_hashmap_m("/lucene_index_file/past_xml/arw57797.xml");
+        hm2_past = XmlWork.get_relevance_hashmap_m("/lucene_index_file/past_xml/arw57272.xml");
+        hm3_past = XmlWork.get_relevance_hashmap_m("/lucene_index_file/past_xml/arw53809.xml");
+        hm4_past = XmlWork.get_relevance_hashmap_m("/lucene_index_file/past_xml/arw53808.xml");
 
         hm_array_past.add(hm1_past);
         hm_array_past.add(hm2_past);
@@ -60,7 +59,7 @@ public class Metrics {
                 }
             }
             if (pairs.getValue().toString().equals("vital")) {
-                all_rel_first ++;
+                all_rel_first++;
 
                 boolean is_cont = hm1.containsKey(pairs.getKey().toString());
                 if (is_cont) {
@@ -165,10 +164,10 @@ public class Metrics {
         System.out.println(average_precision);
     }
 
-    public static double precision(int a, int b)
-    {
-        return ((a + 0.0 + b) == 0) ?  0.0 : (a + 0.0) / (a + 0.0 + b);
+    public static double precision(int a, int b) {
+        return ((a + 0.0 + b) == 0) ? 0.0 : (a + 0.0) / (a + 0.0 + b);
     }
+
     public static double aver_count(HashMap<String, String> hm1, HashMap<String, String> hm1_past, int all_rel_first) {
         double average = 0;
         double sum = 1.0;
@@ -196,7 +195,7 @@ public class Metrics {
                 }
             }
         }
-        return sum/all_rel_first;
+        return sum / all_rel_first;
     }
 }
 

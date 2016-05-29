@@ -1,25 +1,18 @@
 package MainPackage;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
 
-import org.apache.lucene.search.ScoreDoc;
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
-import java.lang.reflect.Array;
-import java.util.Iterator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import org.joox.*;
-import java.io.*;
-import java.util.Map;
 
 public class XmlWork {
-    public static HashMap get_id_query(String filename)
-    {
+    public static HashMap get_id_query(String filename) {
         HashMap<String, String> hashmap = new HashMap();
 
         try {
@@ -47,9 +40,8 @@ public class XmlWork {
         return hashmap;
     }
 
-    public static HashMap<String, String[][]> get_relevance_table(String filename)
-    {
-        HashMap<String, String[][]> hashmap_table = new HashMap<String,  String[][]>();
+    public static HashMap<String, String[][]> get_relevance_table(String filename) {
+        HashMap<String, String[][]> hashmap_table = new HashMap<String, String[][]>();
 
         try {
             File fXmlFile = new File(filename);
@@ -93,8 +85,7 @@ public class XmlWork {
         return hashmap_table;
     }
 
-    public static HashMap<String, HashMap> get_relevance_hashmap(String filename)
-    {
+    public static HashMap<String, HashMap> get_relevance_hashmap(String filename) {
         HashMap<String, HashMap> hashmap_table = new HashMap<String, HashMap>();
 
         HashMap<String, String> hashmap_need_doc = new HashMap<String, String>();
@@ -108,7 +99,6 @@ public class XmlWork {
 
             NodeList nList = doc.getElementsByTagName("task");
             ArrayList<HashMap> help_array = new ArrayList<HashMap>();
-            //System.out.println(help_array.length);
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 help_array.add(new HashMap());
@@ -139,8 +129,7 @@ public class XmlWork {
         return hashmap_table;
     }
 
-    public static HashMap<String, String> get_relevance_hashmap_m(String filename)
-    {
+    public static HashMap<String, String> get_relevance_hashmap_m(String filename) {
         HashMap<String, String> hashmap_table = new HashMap();
 
         try {
@@ -200,11 +189,9 @@ public class XmlWork {
                     get_list_array.add(eElement.getAttribute("id").toString());
                 }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-            catch(Exception e)
-            {
-                e.printStackTrace();
-            }
 
         return get_list_array;
     }
